@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 3rem auto;
+    max-width: 800px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+
+}
+#new-todo{
+    width: 15rem;
+    height: 1rem;
+    padding:1.2em;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.btn{
+    font-size: 20px;
+    padding: 0 1em;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+
+.output{
+    margin-top: 3em;
+    padding: 1.5em;
+    list-style: none;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    width: 100%;
+}
+
+.done-line{
+    text-decoration: line-through;
+}

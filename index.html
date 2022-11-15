@@ -11,8 +11,17 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div id="root">
-        
+    <div id="app" class="container">
+        <div class="input">
+            <input type="text" placeholder="Nuovo To-do" name="new-todo" id="new-todo" @keyup.enter="addTodo" v-model="newTodo" >
+            <button @click="addTodo" class="btn" >Aggiungi</button>
+        </div>
+        <ul class="output">
+            <li v-for="(element, index) in todoList"  class="lista" :class=" todoList[index].done == true ? 'done-line' : '' ">
+               <div class="text" @click="toggleItem(element)">{{element.text}}</div> 
+                <div @click="deleteTodo(index)"><i class="fa-solid fa-xmark"></i></div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
